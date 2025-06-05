@@ -26,7 +26,12 @@
 *.a
 *.lib
 
+
+#objects
+*/objects
+
 # Executables
 *.exe
 *.out
 *.app
+ex00/magaphone
