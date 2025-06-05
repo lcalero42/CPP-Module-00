@@ -26,6 +26,8 @@
 *.a
 *.lib
 
+#vscode
+.vscode
 
 #objects
 */objects
@@ -34,4 +36,4 @@
 *.exe
 *.out
 *.app
-ex00/magaphone
+ex00/megaphone
