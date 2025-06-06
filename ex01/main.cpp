@@ -6,25 +6,61 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 18:27:17 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/05 19:07:17 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/06 14:49:54 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 #include <iostream>
+#include <stdio.h>
+#include <string.h>
 
-int main() {
-    // Create contacts
-    Contact gilbert("Gilbert");
-    Contact gilbert2("Gilbert2");
+void	add_contact(PhoneBook &phone1)
+{
+	Contact current;
+	std::cout << "Enter contact fields one by one :" << std::endl;
+	for (int i = 0; i < 5; i++)
+	{
+		std::string	str;
+		int		num;
 
-    // Add contacts to phone book
-    PhoneBook book;
-    book.addContact(gilbert);
-    book.addContact(gilbert2);
+		std::cout << "\t";
+		if (i != 3)
+		{
+			std::cin >> str;
+			if (i == 0)
+				current.setName(str);
+			else if (i == 1)
+				current.setLastName(str);
+			else if (i == 2)
+				current.setNickname(str);
+			else if (i == 4)
+				current.setSecret(str);
+		}
+		else
+		{
+			std::cin >> num;
+			current.setNumber(num);
+		}
+	}
+	phone1.addContact(current);
+}
 
-    std::cout << gilbert.getName() << std::endl;
-    std::cout << gilbert2.getName() << std::endl;
-    return 0;
+int	main()
+{
+	std::string	line;
+	PhoneBook phone1;
+	
+	while (1)
+	{
+		std::cin >> line;
+		if (line == "EXIT")
+			break ;
+		if (line == "ADD")
+			add_contact(phone1);
+		if (line == "SEARCH")
+			phone1.printContacts();
+	}
+	return (0);
 }

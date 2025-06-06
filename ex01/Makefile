@@ -8,7 +8,7 @@ SRCS = Contact.cpp \
 INC = PhoneBook.hpp \
 		Contact.hpp
 
-NAME = PhoneBook
+NAME = ContactManager
 
 OBJS_DIR = objects/
 OBJS = $(addprefix $(OBJS_DIR), $(SRCS:.cpp=.o))

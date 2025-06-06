@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 17:52:46 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/05 18:59:11 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/06 14:42:08 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,29 @@
 
 class Contact {
 public:
+	//Constructors
 	Contact();
 	Contact(const std::string &name);
 
-	std::string	getName();
-	
+	//Get functions
+	std::string	getName() const;
+	std::string	getLastName() const;
+	std::string	getNickname() const;
+	int			getNumber() const;
+	std::string	getSecret() const;
+
+	//Set functions
+	void	setName(std::string input_name);
+	void	setLastName(std::string input_name);
+	void	setNickname(std::string input_name);
+	void	setSecret(std::string input_secret);
+	void	setNumber(int input_num);
 private:
 	std::string name;
+	std::string	lastName;
+	std::string	nickname;
+	std::string	secret;
+	int	number;
 };
 
 #endif
