@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 18:27:17 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/06 14:49:54 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/12 13:54:44 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,21 @@
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
+#include <cstdlib>
 
 void	add_contact(PhoneBook &phone1)
 {
 	Contact current;
-	std::cout << "Enter contact fields one by one :" << std::endl;
+	std::string	str;
+	
+	std::cout << "Enter fields : first name, last name, nickname, number, secret :"
+		<< std::endl;
 	for (int i = 0; i < 5; i++)
 	{
-		std::string	str;
-		int		num;
-
 		std::cout << "\t";
 		if (i != 3)
 		{
-			std::cin >> str;
+			std::getline(std::cin, str);
 			if (i == 0)
 				current.setName(str);
 			else if (i == 1)
@@ -40,8 +41,8 @@ void	add_contact(PhoneBook &phone1)
 		}
 		else
 		{
-			std::cin >> num;
-			current.setNumber(num);
+			std::getline(std::cin, str);
+			current.setNumber(atoi(str.c_str()));
 		}
 	}
 	phone1.addContact(current);
@@ -51,10 +52,10 @@ int	main()
 {
 	std::string	line;
 	PhoneBook phone1;
-	
+
 	while (1)
 	{
-		std::cin >> line;
+		getline(std::cin, line);
 		if (line == "EXIT")
 			break ;
 		if (line == "ADD")
