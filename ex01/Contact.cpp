@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 18:13:24 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/06 14:51:05 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/17 10:51:30 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ std::string Contact::getLastName() const
 	return (lastName);
 }
 
-int Contact::getNumber() const
+std::string Contact::getNumber() const
 {
 	return (number);
 }
@@ -58,7 +58,7 @@ void	Contact::setNickname(std::string input_name)
 	nickname = input_name;
 }
 
-void	Contact::setNumber(int input_num)
+void	Contact::setNumber(std::string input_num)
 {
 	number = input_num;
 }

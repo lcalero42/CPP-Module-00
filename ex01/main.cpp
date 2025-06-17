@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 18:27:17 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/12 13:54:44 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/17 10:53:16 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,17 @@ void	add_contact(PhoneBook &phone1)
 	for (int i = 0; i < 5; i++)
 	{
 		std::cout << "\t";
-		if (i != 3)
-		{
-			std::getline(std::cin, str);
-			if (i == 0)
-				current.setName(str);
-			else if (i == 1)
-				current.setLastName(str);
-			else if (i == 2)
-				current.setNickname(str);
-			else if (i == 4)
-				current.setSecret(str);
-		}
-		else
-		{
-			std::getline(std::cin, str);
-			current.setNumber(atoi(str.c_str()));
-		}
+		std::getline(std::cin, str);
+		if (i == 0)
+			current.setName(str);
+		else if (i == 1)
+			current.setLastName(str);
+		else if (i == 2)
+			current.setNickname(str);
+		else if (i == 3)
+			current.setNumber(str);
+		else if (i == 4)
+			current.setSecret(str);
 	}
 	phone1.addContact(current);
 }

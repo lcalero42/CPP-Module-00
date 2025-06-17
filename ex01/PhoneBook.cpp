@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 17:44:10 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/12 13:58:11 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/17 10:56:48 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ PhoneBook::PhoneBook() : currentIndex(0) {}
 void	PhoneBook::addContact(const Contact &contact)
 {
 	//Index checking
-	if (currentIndex == 8)
+	if (currentIndex == 7)
 		currentIndex = 0;
 
 	//adding new contact
@@ -34,9 +34,10 @@ Contact PhoneBook::getContact(int index) const
 	return (contacts[index]);
 }
 
-static std::string truncate(const std::string& str) {
+static std::string truncate(const std::string& str)
+{
 	if (str.length() > 10)
-		return str.substr(0, 9) + ".";
+		return str.substr(0, 7) + "...";
 	return (str);
 }
 

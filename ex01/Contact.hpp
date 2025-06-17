@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 17:52:46 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/12 13:51:24 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/17 10:51:53 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	std::string	getName() const;
 	std::string	getLastName() const;
 	std::string	getNickname() const;
-	int			getNumber() const;
+	std::string	getNumber() const;
 	std::string	getSecret() const;
 
 	//Set functions
@@ -35,13 +35,13 @@ public:
 	void	setLastName(std::string input_name);
 	void	setNickname(std::string input_name);
 	void	setSecret(std::string input_secret);
-	void	setNumber(int input_num);
+	void	setNumber(std::string input_num);
 private:
 	std::string name;
 	std::string	lastName;
 	std::string	nickname;
 	std::string	secret;
-	int	number;
+	std::string	number;
 };
 
 #endif
