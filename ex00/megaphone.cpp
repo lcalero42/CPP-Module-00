@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 17:44:15 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/05 17:44:17 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/17 16:01:22 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,5 @@ int	main(int argc, char** argv)
 			putstr(argv[i]);
 		}
 	}
-	std::cout << std::endl;
-	return 0;
+	return (0);
 }
