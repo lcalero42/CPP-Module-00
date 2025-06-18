@@ -6,7 +6,7 @@
 /*   By: lcalero <lcalero@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 17:44:10 by lcalero           #+#    #+#             */
-/*   Updated: 2025/06/17 10:56:48 by lcalero          ###   ########.fr       */
+/*   Updated: 2025/06/18 14:03:49 by lcalero          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Contact PhoneBook::getContact(int index) const
 static std::string truncate(const std::string& str)
 {
 	if (str.length() > 10)
-		return str.substr(0, 7) + "...";
+		return str.substr(0, 9) + ".";
 	return (str);
 }
 
